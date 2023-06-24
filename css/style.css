@@ -8,3 +8,31 @@
   width: 50px;
   aspect-ratio: 1/1;
 }
+
+header {
+  height: 10vh;
+}
+
+main {
+  height: 90vh;
+}
+
+.sidebar {
+  background-image: url(../img/sidebar-bg.png);
+  width: 4.5rem;
+}
+
+.sidebar-text:hover {
+  background-color: white;
+  color: black;
+}
+
+.bg-sidebar-blue {
+  background-color: rgb(5, 30, 52);
+}
+
+@media screen and (min-width:992px) {
+  .sidebar {
+    width: 150px;
+  }
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
   integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,47 +12,101 @@
   <title>Document</title>
 </head>
 <body>
-
+  
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+      <div class="container-fluid bg-white">
+        <!-- logo small fino a lg -->
+        <a class="navbar-brand d-lg-none" href="#">
           <img class="logo-small" src="./img/mobile-logo.png" alt="logo-mobile">
         </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- logo medium da lg in poi -->
+        <a class="navbar-brand d-none d-lg-block" href="#">
+          <img class="logo-lg" src="./img/logo.svg" alt="logo-desktop">
+        </a>
+
+        <!-- search bar -->
+        <form class="d-flex  flex-grow-1" role="search">
+          <div class="input-group border-end-0">
+            <span class="input-group-text bg-light text-black"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <div class="form-floating">
+              <input type="text" class="form-control bg-light border-start-0" id="floatingInputGroup1" placeholder="Search">
+              <label for="floatingInputGroup1" class="text-body-secondary">Prova a cercare: Lezioni di Laravel</label>
+            </div>
+          </div>
+        </form>
+
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <!-- icona con barre -->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa-solid fa-bars"></i>
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
             </li>
+            <!-- punto di domanda -->
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-question"></i>
+              </a>
+            </li>
+            <!-- 3 puntini verticali -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </a>
             </li>
           </ul>
         </div>
-        <form class="d-flex  flex-grow-1" role="search">
-          <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-        </form>
-
-        <button class="navbar-toggler border-0 shadow-none text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- campanella -->
+        <div class="dropstart">
+          <button class="navbar-toggler border-0 shadow-none text-warning d-block btn btn-secondary bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <!-- <button class="navbar-toggler border-0 shadow-none text-warning d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bell"></i>
-        </button>
+        </button> -->
       </div>
     </nav>
   </header>
+
+  <main>
+
+    <!-- sidebar mobile -->
+    <div class="d-flex flex-column flex-shrink-0 h-100 sidebar bg-sidebar-blue">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+          <a href="#" class="nav-link mt-4 py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+            <i class="fa-solid fa-house"></i>
+            <div class="d-none d-lg-block sidebar-text">Home </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+            <i class="fa-solid fa-chart-simple"></i>
+            <div class="d-none d-lg-block sidebar-text">Stats </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+            <i class="fa-solid fa-signal"></i>
+            <div class="d-none d-lg-block sidebar-text">Signals </div>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="d-lg-flex align-items-center gap-3 p-3 text-white text-decoration-none text-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-gear"></i>
+        <div class="d-none d-lg-block sidebar-text">Admin </div>
+      </a>
+    </div>
+  </main>
   
 </body>
 </html>
