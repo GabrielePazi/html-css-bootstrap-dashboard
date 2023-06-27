@@ -16,17 +16,17 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid bg-white">
-        <!-- logo small fino a lg -->
+        <!-- LOGO SMALL DA SM A LG -->
         <a class="navbar-brand d-lg-none" href="#">
           <img class="logo-small" src="./img/mobile-logo.png" alt="logo-mobile">
         </a>
 
-        <!-- logo medium da lg in poi -->
+        <!-- LOGO MEDIUM DA LG -->
         <a class="navbar-brand d-none d-lg-block" href="#">
           <img class="logo-lg" src="./img/logo.svg" alt="logo-desktop">
         </a>
 
-        <!-- search bar -->
+        <!-- SEARCH BAR -->
         <form class="d-flex  flex-grow-1" role="search">
           <div class="input-group border-end-0">
             <span class="input-group-text bg-light text-black"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -39,19 +39,19 @@
 
         <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <!-- icona con barre -->
+            <!-- ICONA CON BARRE -->
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">
                 <i class="fa-solid fa-bars"></i>
               </a>
             </li>
-            <!-- punto di domanda -->
+            <!-- PUNTO DI DOMANDA -->
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="fa-solid fa-circle-question"></i>
               </a>
             </li>
-            <!-- 3 puntini verticali -->
+            <!-- 3 PUNTI VERTICALI -->
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -59,7 +59,7 @@
             </li>
           </ul>
         </div>
-        <!-- campanella -->
+        <!-- CAMPANELLA -->
         <div class="dropstart">
           <button class="navbar-toggler border-0 shadow-none text-warning d-block btn btn-secondary bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-bell"></i>
@@ -75,21 +75,26 @@
   </header>
 
   <main>
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div class="d-flex flex-column flex-shrink-0 h-100 sidebar bg-sidebar-blue overflow-hidden">
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <!-- HOME -->
         <li>
           <a href="#" class="nav-link mt-3 py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
             <i class="fa-solid fa-house"></i>
             <div class="d-none d-lg-block">Home </div>
           </a>
         </li>
+
+        <!-- STATS -->
         <li>
           <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
             <i class="fa-solid fa-chart-simple"></i>
             <div class="d-none d-lg-block">Stats </div>
           </a>
         </li>
+        
+        <!-- SIGNALS -->
         <li>
           <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
             <i class="fa-solid fa-signal"></i>
@@ -97,25 +102,110 @@
           </a>
         </li>
       </ul>
+
+      <!-- ADMIN IN BASSO -->
       <a href="#" class="d-lg-flex align-items-center gap-3 p-3 text-white text-decoration-none text-center" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa-solid fa-gear"></i>
         <div class="d-none d-lg-block sidebar-text">Admin </div>
       </a>
     </div>
 
-    <!-- Content -->
+    <!-- CONTENUTO PRINCIPALE-->
     <div class="container-fluid overflow-auto">
 
-      <!-- top-bar azzurra -->
+      <!-- TOP-BAR  -->
       <div class="row bg-primary position-sticky-top text-white py-3">
+
+        <!-- AGGIUNGI STUDENTE E OFFCANVA -->
         <div class="col-12 col-md-4 col-lg-3 order-md-3">
           <span class="text-white">Nuovo Studente</span>
-          <button type="button" class="btn border-white text-white add-student-btn"><i class="fa-solid fa-plus"></i></button>
+          <a class="btn border-white text-white add-student-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+
+          <!-- offcanva -->
+          <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo studente</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nome</label>
+                  <input class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Cognome</label>
+                  <input class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Indirizzo Email</label>
+                  <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">@</button>
+                    <input type="text" class="form-control"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">@</button>
+                    <input type="text" class="form-control"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Indirizzo</label>
+                  <input type="text" class="form-control" id="inputAddress">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Città</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">Stato</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>Scegli...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">Cap</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Foto</label>
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Seleziona per proseguire
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Salva</button>
+                  <button type="submit" class="btn btn-warning">Svuota</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+
+        <!-- BOOLEAN CON BADGES -->
         <div class="col-12 col-md-4 col-lg-5">
           <div class="d-flex align-items-start">
             <h1>Boolean</h1> 
-            <div class="badge bg-badge rounded-pill mt-3">Piano Blaze</div>
+            <div class="badge bg-badge rounded-pill mt-3 ms-2">Piano Blaze</div>
           </div>
 
           <div class="row">
@@ -129,6 +219,8 @@
             </div>
           </div>
         </div>
+
+        <!-- STUDENTI ONLINE -->
         <div class="col-12 col-md-4 col-lg-4">
           Studenti online negli ultimi 30 minuti
           <div class="row">
@@ -139,7 +231,7 @@
         </div>
       </div>
 
-      <!-- contenuto scrollabile -->
+      <!-- CONTENUTO SCROLLABILE -->
       <div class="row py-4">
         <div class="col-12 col-lg-8">
 
@@ -325,7 +417,7 @@
         </div>
 
         <div class="col-12 col-lg-4">
-          <!-- To Do list -->
+          <!--  TO DO LIST -->
           <div class="card mb-3">
             <div class="card-header fs-4 fw-semibold">
               To-Do List
@@ -348,7 +440,7 @@
             </div>
           </div>
 
-          <!-- grafico -->
+          <!-- GRAFICO -->
           <div class="card mb-3">
             <div class="card-header fs-4 fw-semibold">
               To-Do List
