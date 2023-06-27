@@ -70,34 +70,30 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </div>
-        <!-- <button class="navbar-toggler border-0 shadow-none text-warning d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bell"></i>
-        </button> -->
       </div>
     </nav>
   </header>
 
   <main>
-
-    <!-- sidebar mobile -->
-    <div class="d-flex flex-column flex-shrink-0 h-100 sidebar bg-sidebar-blue">
+    <!-- Sidebar -->
+    <div class="d-flex flex-column flex-shrink-0 h-100 sidebar bg-sidebar-blue overflow-hidden">
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li>
-          <a href="#" class="nav-link mt-4 py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+          <a href="#" class="nav-link mt-3 py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
             <i class="fa-solid fa-house"></i>
-            <div class="d-none d-lg-block sidebar-text">Home </div>
+            <div class="d-none d-lg-block">Home </div>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
             <i class="fa-solid fa-chart-simple"></i>
-            <div class="d-none d-lg-block sidebar-text">Stats </div>
+            <div class="d-none d-lg-block">Stats </div>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+          <a href="#" class="nav-link py-2 text-white d-lg-flex gap-3 align-items-center sidebar-text" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
             <i class="fa-solid fa-signal"></i>
-            <div class="d-none d-lg-block sidebar-text">Signals </div>
+            <div class="d-none d-lg-block">Signals </div>
           </a>
         </li>
       </ul>
@@ -105,6 +101,286 @@
         <i class="fa-solid fa-gear"></i>
         <div class="d-none d-lg-block sidebar-text">Admin </div>
       </a>
+    </div>
+
+    <!-- Content -->
+    <div class="container-fluid overflow-auto">
+
+      <!-- top-bar azzurra -->
+      <div class="row bg-primary position-sticky-top text-white py-3">
+        <div class="col-12 col-md-4 col-lg-3 order-md-3">
+          <span class="text-white">Nuovo Studente</span>
+          <button type="button" class="btn border-white text-white add-student-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="col-12 col-md-4 col-lg-5">
+          <div class="d-flex align-items-start">
+            <h1>Boolean</h1> 
+            <div class="badge bg-badge rounded-pill mt-3">Piano Blaze</div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="badge bg-badge rounded-pill text-white">3 App</div>
+              <span class="text-white"><i class="fa-solid fa-angles-right"></i></span>
+              <div class="badge bg-badge rounded-pill text-white fs-7 d-lg-none"><i class="fa-solid fa-plus"></i></div>
+              <div class="badge bg-badge rounded-pill text-white d-none d-lg-inline-block">Boolean Mobile App</div>
+              <div class="badge bg-badge rounded-pill text-white d-none d-lg-inline-block">Boolean Web App</div>
+              <div class="badge bg-badge rounded-pill text-white d-none d-lg-inline-block">Boolean Blog App</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          Studenti online negli ultimi 30 minuti
+          <div class="row">
+            <div class="col">
+              <span class="fs-4">125</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contenuto scrollabile -->
+      <div class="row py-4">
+        <div class="col-12 col-lg-8">
+
+          <!-- tabella con classi -->
+          <div class="card mb-3">
+            <div class="card-header fs-4 fw-semibold">
+              Prossime Classi
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data Inizio</th>
+                    <th scope="col">ROI</th>
+                    <th scope="col">Stato</th>
+                    <th class="text-center" scope="col">Azioni</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Prima riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 75
+                    </th>
+                    <td>15 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-success">Done</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Seconda riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 76
+                    </th>
+                    <td>16 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-success">Done</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Terza riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 77
+                    </th>
+                    <td>17 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-warning">Process</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Quarta Riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 78
+                    </th>
+                    <td>18 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-success">Done</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Quinta riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 79
+                    </th>
+                    <td>19 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-danger">Failed</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Sesta riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 80
+                    </th>
+                    <td>20 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-success">Done</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Settima riga -->
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 81
+                    </th>
+                    <td>21 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-danger">Failed</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img class="avatar-image" src="./img/class-avatar.jpg" alt="avatar">
+                      Classe 81
+                    </th>
+                    <td>22 Febbraio 2021</td>
+                    <td>20%</td>
+                    <td><h6><span class="badge bg-success">Done</span></h6></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                      <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- faq -->
+          <div class="card mb-3">
+            <div class="card-header fs-4 fw-semibold">
+              F.A.Q.
+            </div>
+            <div class="card-body">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Come aggiungere un nuovo studente ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Come accedere alle informazioni del mio account ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Posso usare questa dashboard da mobile ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <!-- To Do list -->
+          <div class="card mb-3">
+            <div class="card-header fs-4 fw-semibold">
+              To-Do List
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                  <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                  <label class="form-check-label" for="secondCheckbox">Lezioni su Bootstrap 5.3 in classe #75</label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                  <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- grafico -->
+          <div class="card mb-3">
+            <div class="card-header fs-4 fw-semibold">
+              To-Do List
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item border-bottom-0">
+                  <img class="w-100" src="./img/stats.jpeg" alt="">
+                </li>
+                <li class="list-group-item">
+                  <div>
+                    <div class="fs-4 fw-semibold">Utenti attivi</div>
+                    <div>Lisat degli utenti attivi in piattaforma nell'ultimo mese</div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Gennaio: 1200
+                </li>
+                <li class="list-group-item">
+                  Febbraio: 800
+                </li>
+                <li class="list-group-item">
+                  Marzo: 1500
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Visualizza report approfondito</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   

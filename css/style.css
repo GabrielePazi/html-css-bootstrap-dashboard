@@ -6,15 +6,15 @@
 
 .logo-small {
   width: 50px;
-  aspect-ratio: 1/1;
 }
 
 header {
-  height: 10vh;
+  height: 12vh;
 }
 
 main {
-  height: 90vh;
+  height: 88vh;
+  display: flex;
 }
 
 .sidebar {
@@ -23,12 +23,27 @@ main {
 }
 
 .sidebar-text:hover {
-  background-color: white;
+  border-radius: 0%;
+  background-color: rgb(131, 143, 154);
   color: black;
 }
 
 .bg-sidebar-blue {
   background-color: rgb(5, 30, 52);
+}
+
+.bg-badge {
+  background-color: rgb(22, 91, 186);
+}
+
+.add-student-btn:hover {
+  color: black !important;
+  background-color: white;
+}
+
+.avatar-image {
+  width: 40px;
+  aspect-ratio: 1/1;
 }
 
 @media screen and (min-width:992px) {
